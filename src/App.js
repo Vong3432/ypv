@@ -7,8 +7,7 @@ import List from './components/List';
 import { useLocalStorage } from './functions/useLocalStorage';
 import Footer from './components/Footer';
 
-const getVideos = async (key, country, pageToken) => {
-  
+const getVideos = async (key, country, pageToken) => {  
   const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=${process.env.REACT_APP_YOUTUBE_API_KEY}&regionCode=${country.lang}&pageToken=${pageToken}`)
   return res.json();
 }
