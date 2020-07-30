@@ -1,7 +1,6 @@
 {
   "name": "youtube-videos-hobby-app",
-  "version": "0.1.0",
-  "homepage": "https://Vong3432.github.io/ypv/",
+  "version": "0.1.0",  
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
