@@ -91,20 +91,17 @@ function App() {
     window.scrollTo({ top: 0 })    
   }, [pageToken])
 
-  console.log(status)
+  if(isLoading)
+    return <h5>Is loading ...</h5>
+
+  if(status === 'error')
+    return <h5>Something went wrong ... Please refresh page</h5>
 
   return (
     <div className="App">
       <div className="container py-5">
 
-        <h2 className="text-center mt-3">🔥 Most popular video in <span className="country-highlight">#{country.name}</span></h2>
-
-        {isLoading && <div>
-          <h5>Is loading ...</h5>
-        </div>}
-        {status === 'error' && <div>
-          <h5>Something went wrong ...</h5>
-        </div>}                
+        <h2 className="text-center mt-3">🔥 Most popular video in <span className="country-highlight">#{country.name}</span></h2>    
                 
         {data && (
           <>

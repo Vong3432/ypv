@@ -17,21 +17,17 @@ const Video = ({ video }) => {
         publishedAt,
         tags,
         thumbnails
-    } = video.snippet;
+    } = video.snippet;    
 
     const [showDesc, setShowDesc] = useState(false);        
 
-    const { data, isLoading, status } = useQuery(['channel', channelId], getChannelInfo);
-
-    const openVideoInNewTab = () => {
-        window.open(`https://www.youtube.com/watch?v=${video.id}`, "_blank")        
-    }            
+    const { data, isLoading, status } = useQuery(['channel', channelId], getChannelInfo);        
 
     return (
         <div className="video-item-div">                                 
 
             <a href={`https://www.youtube.com/watch?v=${video.id}`}>
-                <img src={thumbnails.standard.url} alt={title} />
+                <img src={thumbnails.high.url} alt={title} />
             </a>            
             <div className="video-item-content">
                 <h5 className="video-title">{title}</h5>                                
