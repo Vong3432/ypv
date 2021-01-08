@@ -25,7 +25,7 @@ const Video = ({ video }) => {
     return (
         <div className="video-item-div">                                 
 
-            <a href={`https://www.youtube.com/watch?v=${video.id}`}>
+            <a target="_blank" href={`https://www.youtube.com/watch?v=${video.id}`}>
                 <div className="video-thumbnail-wrapper">
                     <img className="video-thumbnail" src={thumbnails.high.url} alt={title} />
                 </div>                
