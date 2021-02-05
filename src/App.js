@@ -7,6 +7,7 @@ import List from './components/List';
 import { useLocalStorage } from './functions/useLocalStorage';
 import Footer from './components/Footer';
 import useIntersectionObserver from './functions/useIntersectionObserver';
+// import { Helmet } from 'react-helmet';
 
 
 const queryClient = new QueryClient({
@@ -17,7 +18,7 @@ const queryClient = new QueryClient({
   }
 });
 
-function App() {
+function App() {  
 
   // const [keyword, setKeyword] = useState("");
 
@@ -56,6 +57,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <QueryClientProvider client={queryClient}>
         <Main />
       </QueryClientProvider>
