@@ -14,7 +14,7 @@
     "react-helmet": "^6.1.0",
     "react-query": "^3.5.11",
     "react-query-devtools": "^2.4.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
